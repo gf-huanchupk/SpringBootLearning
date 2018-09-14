@@ -1,5 +1,5 @@
 # maven ignore
-/target/
+target/
 *.jar
 *.war
 *.zip
@@ -7,12 +7,12 @@
 *.tar.gz
 
 # eclipse ignore
-/.settings/
+.settings/
 .project
 .classpath
 
 # idea ignore
-/.idea/
+.idea/
 *.ipr
 *.iml
 *.iws
