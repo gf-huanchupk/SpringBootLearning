@@ -1,0 +1,20 @@
+server:
+  port: 8081
+
+person:
+  lastName: zhangsan # 也可写成(松散语法) last-name:zhansang
+  age: 18
+  boss: false
+  birth: 2017/12/12
+  map: {k1: v1, k2 : 12}
+  list:
+    - lisi
+    - zhaoliu
+  dog:
+    name: 史努比
+    age: 2
+  email: xxxxxx
+cat:
+  name: Tom
+  age: 5
+  email: xxxxxx
