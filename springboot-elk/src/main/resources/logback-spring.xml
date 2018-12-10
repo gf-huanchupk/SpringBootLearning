@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+        <!--该日志将日志级别不同的log信息保存到不同的文件中 -->
+<configuration>
+<include resource="org/springframework/boot/logging/logback/defaults.xml" />
+
+<springProperty scope="context" name="springAppName"
+                source="spring.application.name" />
+
+<!-- 日志在工程中的输出位置 -->
+<property name="LOG_FILE" value="${BUILD_FOLDER:-build}/${springAppName}" />
+
+<!-- 控制台的日志输出样式 -->
+<property name="CONSOLE_LOG_PATTERN"
+          value="%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){faint} %clr(${LOG_LEVEL_PATTERN:-%5p}) %clr(${PID:- }){magenta} %clr(---){faint} %clr([%15.15t]){faint} %m%n${LOG_EXCEPTION_CONVERSION_WORD:-%wEx}}" />
+
+<!-- 控制台输出 -->
+<appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+    <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+        <level>INFO</level>
+    </filter>
+    <!-- 日志输出编码 -->
+    <encoder>
+        <pattern>${CONSOLE_LOG_PATTERN}</pattern>
+        <charset>utf8</charset>
+    </encoder>
+</appender>
+
+<!-- 为logstash输出的JSON格式的Appender -->
+<appender name="logstash"
+          class="net.logstash.logback.appender.LogstashTcpSocketAppender">
+    <destination>127.0.0.1:5044</destination>
+    <!-- 日志输出编码 -->
+    <encoder
+            class="net.logstash.logback.encoder.LoggingEventCompositeJsonEncoder">
+        <providers>
+            <timestamp>
+                <timeZone>UTC</timeZone>
+            </timestamp>
+            <pattern>
+                <pattern>
+                    {
+                    "severity": "%level",
+                    "service": "${springAppName:-}",
+                    "trace": "%X{X-B3-TraceId:-}",
+                    "span": "%X{X-B3-SpanId:-}",
+                    "exportable": "%X{X-Span-Export:-}",
+                    "pid": "${PID:-}",
+                    "thread": "%thread",
+                    "class": "%logger{40}",
+                    "rest": "%message"
+                    }
+                </pattern>
+            </pattern>
+        </providers>
+    </encoder>
+</appender>
+
+<!-- 日志输出级别 -->
+<root level="INFO">
+    <appender-ref ref="console" />
+    <appender-ref ref="logstash" />
+</root>
+
+</configuration>
