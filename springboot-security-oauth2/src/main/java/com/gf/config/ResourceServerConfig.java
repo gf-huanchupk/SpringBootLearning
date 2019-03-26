@@ -14,8 +14,10 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
 
     /**
      * 这里设置需要token验证的url
-     * 这些url需要在WebSecurityConfigurerAdapter中排查掉
-     * 否则优先进入WebSecurityConfigurerAdapter,进行的是basic auth或表单认证,而不是token认证
+     * 这些url可以在WebSecurityConfigurerAdapter中排查掉，
+     * 对于相同的url，如果二者都配置了验证
+     * 则优先进入ResourceServerConfigurerAdapter,进行token验证。而不会进行
+     * WebSecurityConfigurerAdapter 的 basic auth或表单认证。
      */
     @Override
     public void configure(HttpSecurity http) throws Exception {
