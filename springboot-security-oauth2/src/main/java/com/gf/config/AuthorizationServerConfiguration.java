@@ -63,26 +63,9 @@ public class AuthorizationServerConfiguration extends AuthorizationServerConfigu
 
     @Override
     public void configure(AuthorizationServerSecurityConfigurer security) throws Exception {
-        /**
-         * 配置oauth2服务跨域
-         */
-        CorsConfigurationSource source = new CorsConfigurationSource() {
-            @Override
-            public CorsConfiguration getCorsConfiguration(HttpServletRequest request) {
-                CorsConfiguration corsConfiguration = new CorsConfiguration();
-                corsConfiguration.addAllowedHeader("*");
-                corsConfiguration.addAllowedOrigin(request.getHeader( HttpHeaders.ORIGIN));
-                corsConfiguration.addAllowedMethod("*");
-                corsConfiguration.setAllowCredentials(true);
-                corsConfiguration.setMaxAge(3600L);
-                return corsConfiguration;
-            }
-        };
-
-        security.tokenKeyAccess("permitAll()")
+       security.tokenKeyAccess("permitAll()")
                 .checkTokenAccess("permitAll()")
-                .allowFormAuthenticationForClients()
-                .addTokenEndpointAuthenticationFilter(new CorsFilter(source));
+                .allowFormAuthenticationForClients();
     }
 
     @Override
