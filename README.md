@@ -33,7 +33,7 @@
 - [第五篇 : 路由网关（Zuul）](https://mp.weixin.qq.com/s/GYu_BRxuhmGl7dQnlnsEmQ)
 - [第六篇 : 分布式配置中心（Spring Cloud Config）](https://mp.weixin.qq.com/s/Pbcc3B3vzrMUKgbpijrJFQ)
 - [第七篇 : 高可用的分布式配置中心（Spring Cloud Config）](https://mp.weixin.qq.com/s/yj0snlPFobakq3akc_FJGw)
-- [第八篇 : 消息总线（Spring Cloud Bus）	8 months ago](https://mp.weixin.qq.com/s/a2NLClc56BXJxrIiCXODUw)
+- [第八篇 : 消息总线（Spring Cloud Bus）	8 months ago](https://mp.weixin.qq.com/s/Vxu8HPQKOC49yztEHE5ajQ)
 - [第九篇 : 服务链路追踪（Spring Cloud Sleuth）](https://mp.weixin.qq.com/s/a2NLClc56BXJxrIiCXODUw)
 - [第十篇 : 高可用的服务注册中心](https://mp.weixin.qq.com/s/A75d2Ec5-IwoGxbJEWj41w)
 - [第十一篇 : 断路器监控（Hystrix Dashboard）](https://mp.weixin.qq.com/s/Sv7agttPg2R1kyXMvxI-Gw)
