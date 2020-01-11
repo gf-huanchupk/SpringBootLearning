@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.gf.mapper.AccountMapper">
+    <resultMap id="BaseResultMap" type="com.gf.entity.Account">
+        <id column="id" property="id" jdbcType="INTEGER"/>
+        <result column="user_id" property="userId" jdbcType="VARCHAR"/>
+        <result column="money" property="money" jdbcType="DECIMAL"/>
+    </resultMap>
+
+    <select id="selectByUserId" resultType="com.gf.entity.Account">
+        select id, user_id, money from account_tbl
+        WHERE user_id = #{userId}
+    </select>
+
+    <update id="updateById">
+      update account_tbl
+      set money = #{account.money,jdbcType=DECIMAL}
+      where id = #{account.id}
+    </update>
+
+</mapper>
