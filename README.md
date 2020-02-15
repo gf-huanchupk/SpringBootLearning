@@ -83,7 +83,7 @@
 
 <div>
     <p align="center">
-        <img src="http://image.itwolfed.com/author/wechat-author.jpg" width="258" height="258"/>
+        <img src="https://img-blog.csdnimg.cn/20181219135239593.jpg" width="258" height="258"/>
         <br>
         欢迎扫码或微信搜索公众号《程序员果果》关注我，更多精彩内容不能错过 ~~
     </p>
