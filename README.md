@@ -25,6 +25,7 @@
 - [Spring Boot 教程 | Spring Boot Security OAuth2 实现支持JWT令牌的授权服务器](http://blog.itwolfed.com/blog/17)
 - [Spring Boot 教程 | Spring Boot Actuator 整合 Prometheus](http://blog.itwolfed.com/blog/18)
 - [Spring Boot 教程 | Spring Boot 集成 Seata 解决分布式事务问题](http://blog.itwolfed.com/blog/19)
+- [Spring Boot 教程 | Spring Boot 使用 JSR303 实现参数验证](http://blog.itwolfed.com/blog/97)
 
 ### Spring Cloud 系列
 
