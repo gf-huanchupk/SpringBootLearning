@@ -7,6 +7,9 @@
 - github | Spring Boot 系列 ：[https://github.com/gf-huanchupk/SpringBootLearning](https://github.com/gf-huanchupk/SpringBootLearning),记得star哦！
 - github | Spring Cloud 系列 ：[https://github.com/gf-huanchupk/SpringCloudLearning](https://github.com/gf-huanchupk/SpringCloudLearning),记得star哦！
 
+### RocketMQ 系列
+- [RocketMQ 教程 | RocketMQ 简介](http://blog.itwolfed.com/blog/98)
+- [RocketMQ 教程 | RocketMQ 安装](http://blog.itwolfed.com/blog/99)
 
 ### Spring Boot 系列
 
