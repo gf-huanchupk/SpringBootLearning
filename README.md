@@ -87,7 +87,7 @@
 
 <div>
     <p align="center">
-        <img src="https://img2020.cnblogs.com/blog/528977/202006/528977-20200619101603310-1500034945.jpg" width="258" height="258"/>
+        <img src="https://gf-huanchupk.github.io/uploads/avatar.jpg" width="258" height="258"/>
         <br>
         欢迎扫码或微信搜索公众号《程序员果果》关注我，更多精彩内容不能错过 ~~
     </p>
