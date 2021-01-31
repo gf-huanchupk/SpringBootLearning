@@ -1,0 +1,7 @@
+server:
+  port: 8080
+
+rocketmq:
+  name-server: 172.16.250.129:9876
+  producer:
+    group: myGroup
