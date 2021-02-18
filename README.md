@@ -10,6 +10,7 @@
 ### RocketMQ 系列
 - [RocketMQ 教程 | RocketMQ 简介](http://blog.itwolfed.com/blog/98)
 - [RocketMQ 教程 | RocketMQ 安装](http://blog.itwolfed.com/blog/99)
+- [RocketMQ 教程 | RocketMQ 常用消息类型](http://blog.itwolfed.com/blog/101)
 
 ### Spring Boot 系列
 
